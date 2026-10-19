@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airbnb Luxury Ad Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Commercial Video Production Tool</p>
+          <h1>Airbnb Luxury Ad Studio</h1>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="panel controls-panel">
+          <div class="field-group">
+            <label for="imageUpload">Upload property photos</label>
+            <input id="imageUpload" type="file" accept="image/*" multiple />
+            <small>Use 5–10 approved property photos only. No made-up assets.</small>
+          </div>
+
+          <div class="field-group">
+            <label for="headlineInput">Headline</label>
+            <input id="headlineInput" type="text" value="Wake up somewhere extraordinary" maxlength="80" />
+          </div>
+
+          <div class="field-group">
+            <label for="ctaInput">Call to action</label>
+            <input id="ctaInput" type="text" value="Check availability on Airbnb" maxlength="60" />
+          </div>
+
+          <div class="field-group">
+            <label for="accentInput">Accent line</label>
+            <input id="accentInput" type="text" value="A refined escape made to feel like home" maxlength="80" />
+          </div>
+
+          <div class="field-row">
+            <button id="renderBtn" class="primary-btn">Render cinematic ad</button>
+            <button id="downloadBtn" class="secondary-btn" disabled>Download video</button>
+          </div>
+
+          <div class="status-box" id="statusBox">Waiting for approved images.</div>
+        </section>
+
+        <section class="panel preview-panel">
+          <canvas id="previewCanvas" width="1080" height="1920"></canvas>
+          <div class="preview-meta">
+            <span>Format: 9:16</span>
+            <span>Duration: 20s</span>
+            <span>Client-safe motion graphics</span>
+          </div>
+        </section>
+      </main>
+
+      <section class="panel thumbnails-panel">
+        <h2>Approved image queue</h2>
+        <div id="thumbnailGrid" class="thumbnail-grid"></div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
